@@ -14,8 +14,7 @@ export default function Banner() {
             Adoby Master Digital Product to Explore
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Get to your greatest work, faster. Plus up colors and styles, create
-            layouts, and make it real.
+            Get to your greatest work, faster. Plus up colors and styles, create layouts, and make it real.
           </Text>
           <Button variant="primary">Explore</Button>
         </Box>
@@ -33,32 +32,7 @@ const styles = {
     pb: [2, null, 0, null, 2, 0, null, 5],
     position: "relative",
     zIndex: 2,
-    "&::before": {
-      position: "absolute",
-      content: '""',
-      bottom: 100,
-      left: 0,
-      height: "100%",
-      width: "100%",
-      zIndex: -1,
-      backgroundImage: `url(${AbstractLeft2})`,
-      backgroundRepeat: `no-repeat`,
-      backgroundPosition: "bottom left",
-      backgroundSize: "36%",
-    },
-    "&::after": {
-      position: "absolute",
-      content: '""',
-      bottom: "200px",
-      right: 0,
-      height: "100%",
-      width: "100%",
-      zIndex: -1,
-      backgroundImage: `url(${AbstractLeft3})`,
-      backgroundRepeat: `no-repeat`,
-      backgroundPosition: "bottom right",
-      backgroundSize: "32%",
-    },
+
     container: {
       minHeight: "inherit",
       display: "flex",
@@ -75,6 +49,36 @@ const styles = {
       justifyContent: "center",
       textAlign: "center",
       display: "inline-flex",
+      position: "relative",
+      "&::before": {
+        display: "none",
+        position: "absolute",
+        content: '""',
+        bottom: 0,
+        left: "50%",
+        marginLeft: "-50vw",
+        height: "100%",
+        width: "100%",
+        zIndex: -1,
+        backgroundImage: `url(${AbstractLeft2})`,
+        backgroundRepeat: `no-repeat`,
+        backgroundPosition: "bottom left",
+        backgroundSize: "50%",
+      },
+      "&::after": {
+        display: "none",
+        position: "absolute",
+        content: '""',
+        bottom: "200px",
+        right: 0,
+        height: "20%",
+        width: "100vw",
+        zIndex: -1,
+        backgroundImage: `url(${AbstractLeft3})`,
+        backgroundRepeat: `no-repeat`,
+        backgroundPosition: "bottom right",
+        backgroundSize: "32%",
+      },
       mb: [0, null, -6, null, null, "-40px", null, -3],
       img: {
         position: "relative",

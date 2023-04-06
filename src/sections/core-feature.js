@@ -7,10 +7,8 @@ import shapePattern from "assets/AbstractPattern4.png";
 
 const data = {
   subTitle: "Core features",
-  title:
-    "Illustrator lets you create precise, editable vector graphics that stay sharp when scaled to any size.",
-  description:
-    "Use flexible shape and drawing tools to create logos, icons, and other illustrations that look equally good on a business card, flyer, or billboard.",
+  title: "Illustrator lets you create precise, editable vector graphics that stay sharp when scaled to any size.",
+  description: "Use flexible shape and drawing tools to create logos, icons, and other illustrations that look equally good on a business card, flyer, or billboard.",
   btnName: "Get Started",
   btnURL: "#",
 };
@@ -20,19 +18,11 @@ export default function CoreFeature() {
     <section sx={{ variant: "section.coreFeature" }}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.contentBox}>
-          <TextFeature
-            subTitle={data.subTitle}
-            title={data.title}
-            description={data.description}
-            btnName={data.btnName}
-            btnURL={data.btnURL}
-          />
+          <TextFeature subTitle={data.subTitle} title={data.title} description={data.description} btnName={data.btnName} btnURL={data.btnURL} />
         </Box>
         <Box sx={styles.thumbnail}>
           <Image src={FeatureThumb} alt="Thumbnail" />
-          <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt="Shape" />
-          </Box>
+          <Box sx={styles.shapeBox}>{/* <Image src={shapePattern} alt="Shape" /> */}</Box>
         </Box>
       </Container>
     </section>

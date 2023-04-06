@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 /** @jsx jsx */
-import {
-  jsx,
-  Container,
-  Box,
-  Grid,
-  Text,
-  Heading,
-  Button,
-  Image,
-} from "theme-ui";
+import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from "theme-ui";
 import { keyframes } from "@emotion/core";
 import TextFeature from "components/text-feature";
 import ModalVideo from "react-modal-video";
@@ -30,8 +21,7 @@ const data = {
       imgSrc: Smart,
       altText: "Smart Features",
       title: "Smart Features",
-      text:
-        "Smart Settings makes sure that you won't embarrass yourself anytime soon. The app claims to be “context aware.” That means that Smart Settings takes cues from what's going on in your environment for it to appropriately switch between profiles.",
+      text: "Smart Settings makes sure that you won't embarrass yourself anytime soon. The app claims to be “context aware.” That means that Smart Settings takes cues from what's going on in your environment for it to appropriately switch between profiles.",
     },
     {
       id: 2,
@@ -56,29 +46,19 @@ export default function ServiceSection() {
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src={ServiceThumb} alt="ThumbNail" />
-          <Button
-            sx={styles.videoBtn}
-            onClick={handleClick}
-            aria-label="Play Button"
-          >
+          <Button sx={styles.videoBtn} onClick={handleClick} aria-label="Play Button">
             <span>
               <IoIosPlay />
             </span>
           </Button>
-          <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt="shape" />
-          </Box>
+          <Box sx={styles.shapeBox}>{/* <Image src={shapePattern} alt="shape" /> */}</Box>
         </Box>
         <Box sx={styles.contentBox}>
           <TextFeature subTitle={data.subTitle} title={data.title} />
           <Grid sx={styles.grid}>
             {data.features.map((feature) => (
               <Box sx={styles.card} key={feature.id}>
-                <Image
-                  src={feature.imgSrc}
-                  alt={feature.altText}
-                  sx={styles.icon}
-                />
+                <Image src={feature.imgSrc} alt={feature.altText} sx={styles.icon} />
                 <Box sx={styles.wrapper}>
                   <Heading sx={styles.wrapper.tittle}>{feature.title}</Heading>
                   <Text sx={styles.wrapper.subTitle}>{feature.text}</Text>
@@ -88,12 +68,7 @@ export default function ServiceSection() {
           </Grid>
         </Box>
       </Container>
-      <ModalVideo
-        channel="youtube"
-        isOpen={videoOpen}
-        videoId="ruYy57whS4Y"
-        onClose={() => setVideoOpen(false)}
-      />
+      <ModalVideo channel="youtube" isOpen={videoOpen} videoId="ruYy57whS4Y" onClose={() => setVideoOpen(false)} />
     </section>
   );
 }
