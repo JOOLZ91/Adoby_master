@@ -31,7 +31,7 @@ const styles = {
       cursor: "pointer",
       px: "2px",
       color: "#BBC7D7",
-      transition: "all 0.25s",
+      transition: "all 0.30s",
       "&:hover": {
         color: "text",
       },
